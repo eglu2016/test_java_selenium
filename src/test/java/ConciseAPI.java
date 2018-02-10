@@ -23,4 +23,12 @@ public abstract class ConciseAPI {
 
     public void open(String url) {getWebDriver().get(url);
     }
+
+    public By byXpath(String xpath) {
+        return By.xpath(xpath);
+    }
+
+    public By by(String xpath) {
+        return  byXpath(xpath);
+    }
 }

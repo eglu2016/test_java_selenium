@@ -1,3 +1,4 @@
+import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -18,6 +19,8 @@ public class GooglePage extends BasePage {
 
     @FindBy(xpath = "(//div[@class='g']//span)[2]")
     WebElement firstResult;
+
+    By firstResultBy = by("(//div[@class='g']//span)[2]");
 
     public void searchMore(String text) {
         searchField.sendKeys(text, Keys.ENTER);
